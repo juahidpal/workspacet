@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+locationorg.eclipse.jst.server.tomcat.runtime.70=/usr/share/tomcat7
+locationorg.eclipse.jst.server.tomcat.runtime.80=/home/dit/tomcat
+locationorg.eclipse.jst.server.tomcat.runtime.85=/home/dit/tomcat

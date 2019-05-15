@@ -1,0 +1,35 @@
+breadcrumb.org.eclipse.jst.j2ee.J2EEPerspective=true
+content_assist_category_order=org.eclipse.jdt.ui.templateProposalCategory\:0\u0000org.eclipse.jdt.ui.swtProposalCategory\:65536\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\:2\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\:3\u0000org.eclipse.jdt.ui.textProposalCategory\:65539\u0000org.eclipse.jdt.ui.javaAllProposalCategory\:5\u0000org.eclipse.jpt.jaxb.ui.jaxbCompletionProposals\:65541\u0000org.eclipse.jpt.jpa.ui.jpaProposalCategory\:65542\u0000org.eclipse.jst.ws.jaxws.ui.jaxwsProposalComputer\:65543\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\:9\u0000org.eclipse.pde.api.tools.ui.apitools_proposal_category\:10\u0000org.jboss.tools.jst.web.kb.kb_el_proposals\:11\u0000
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jpt.jaxb.ui.jaxbCompletionProposals\u0000org.eclipse.jst.ws.jaxws.ui.jaxwsProposalComputer\u0000org.eclipse.jdt.ui.swtProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jpt.jpa.ui.jpaProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs></history>
+content_assist_number_of_computers=21
+eclipse.preferences.version=1
+fontPropagated=true
+hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;0;org.jboss.tools.jst.web.ui.internal.editor.jspeditor.info.JavaStringELInfoHover;0;org.jboss.tools.common.ui.quickfix.BaseJavaHover;0;org.eclipse.jdt.ui.ProblemHover;0;org.eclipse.jdt.ui.NLSStringHover;327680;org.eclipse.jdt.ui.JavadocHover;393216;org.eclipse.jdt.ui.AnnotationHover;0;org.eclipse.jdt.ui.JavaSourceHover;131072;
+hoverModifiers=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;\!0;org.jboss.tools.jst.web.ui.internal.editor.jspeditor.info.JavaStringELInfoHover;\!0;org.jboss.tools.common.ui.quickfix.BaseJavaHover;\!0;org.eclipse.jdt.ui.ProblemHover;\!0;org.eclipse.jdt.ui.NLSStringHover;Ctrl+Alt;org.eclipse.jdt.ui.JavadocHover;Ctrl+Shift;org.eclipse.jdt.ui.AnnotationHover;\!0;org.eclipse.jdt.ui.JavaSourceHover;Shift;
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=15
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
+proposalOrderMigrated=true
+sourceHoverBackgroundColor=30,30,30
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

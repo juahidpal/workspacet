@@ -1,0 +1,207 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#logotipo {
+	float: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+.boton {
+	background-color: #a55;
+	color: white;
+	text-transform: uppercase;
+}
+
+.boton:hover,  .acceso:hover{
+	background-color: #5a5;
+}
+
+
+.acceso {
+	display: block;
+	background-color: #a55;
+	color: white;
+	float: right;
+	font-size: 11px;
+	padding: 10px 7px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 2px;
+}
+
+
+#formacceso {
+	border: 2px solid #a55;
+	color: #a55;
+	background-color: white;
+	display: none;
+	font-size: 11px;
+	padding: 0px 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	top: 10px; 
+	right: 10px;
+}
+
+#formacceso .boton {
+	font-size: 10px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 0;
+}
+
+#botonCancelar {
+	float: right;
+}
+
+#nombreusuario {
+	background-color: white;
+	color:  #a55;
+}
+
+#pie {
+    position: fixed;
+    background-color: white;
+    bottom: 0;
+    margin: 0;
+    height: 35px;
+    width: 100%;
+    border-top: 1px solid rgb(180, 180, 180);
+}
+
+#pie p {
+    padding: 0px 20px;
+    font-size: 0.85em;
+    /*Debido a que el texto de la tarea se puede malinterpretar,
+      se admite como font-size (0.85em, 0.15em, 15% y 85%)*/
+    margin-top: 4px;
+}
+
+#bienvenida, #menu, #crear,  #lista {
+	clear: both;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bienvenida, #menu {
+	padding-top: 10%;
+}
+
+#crear,  #lista{
+	padding-top: 4%;
+	width: 75%;
+}
+
+#menu span.fondo{
+	display: block;
+	background-image: url('../imagenes/fondonota.jpg');
+	background-repeat: no-repeat; /*opcional*/ 
+	width: 260px;
+	height: 255px;
+	font-size: 2em;
+	font-weight: bold;
+	color: #a55;
+}
+
+#menu span.textoopcion{
+	display: block;
+	padding-top: 100px;
+}
+
+#menu li {
+	display: inline-table;
+	list-style: none;
+}
+
+#formcrear {
+	border: 2px solid #a55;
+	color: #a55;
+	background-color: white;
+}
+
+#formcrear form {
+	padding-top: 4%;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#formcrear label {
+	display: block;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#formcrear input[type="text"] {
+	height: 20px;
+	width: 100%;
+}
+
+#formcrear .boton {
+	font-weight: bold;
+	margin: 10px;
+	padding: 10px;
+}
+	
+#nota {
+	height: 80px;
+	width: 100%;
+	resize: none;
+}
+
+#exito,  #error {
+	background-color: #5a5;
+	color: white;
+	font-size: 1.25em;
+	text-align: center;
+	padding: 0px;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	width: 40%;
+}
+
+#error {
+	background-color: #a55;
+}
+
+#lista td {
+	border-top: 2px solid #a55;
+	border-bottom: 2px solid #a55;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#lista td:hover {
+	background-color: #fec;
+}
+
+#lista table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+
+.detalle {
+	display: none;
+}
+
+.detalle img {
+	padding: 20px;
+}
+
+.textonota {
+	border: 1px dotted #a55;
+}
+
+

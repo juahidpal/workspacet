@@ -1,0 +1,89 @@
+
+may. 07, 2019 10:47:26.71 NEW SESSION
+may. 07, 2019 10:47:26.72 
+may. 07, 2019 10:47:26.72 (/usr/lib/firefox/firefox:6115): dconf-WARNING **: 10:47:26.718: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 07, 2019 11:15:54.70 
+may. 07, 2019 11:15:54.70 (/usr/lib/firefox/firefox:8152): dconf-WARNING **: 11:15:54.706: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+
+may. 08, 2019 23:14:34.45 NEW SESSION
+may. 08, 2019 23:14:34.45 
+may. 08, 2019 23:14:34.47 (/usr/lib/firefox/firefox:8848): dconf-WARNING **: 23:14:34.451: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 08, 2019 23:15:14.50 
+may. 08, 2019 23:15:14.50 (/usr/lib/firefox/firefox:9102): dconf-WARNING **: 23:15:14.504: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 08, 2019 23:15:46.29 
+may. 08, 2019 23:15:46.29 (/usr/lib/firefox/firefox:16386): dconf-WARNING **: 23:15:46.293: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 08, 2019 23:21:14.71 [Parent 8760, Gecko_IOThread] WARNING: pipe error (164): Conexión reinicializada por la máquina remota: file /build/firefox-BQwAIc/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 08, 2019 23:21:28.60 [Parent 8760, Gecko_IOThread] WARNING: pipe error (100): Conexión reinicializada por la máquina remota: file /build/firefox-BQwAIc/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 08, 2019 23:35:45.28 
+may. 08, 2019 23:35:45.28 (/usr/lib/firefox/firefox:17028): dconf-WARNING **: 23:35:45.282: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 08, 2019 23:37:24.31 
+may. 08, 2019 23:37:24.31 (/usr/lib/firefox/firefox:18769): dconf-WARNING **: 23:37:24.310: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 09, 2019 24:03:02.54 
+may. 09, 2019 24:03:02.54 (/usr/lib/firefox/firefox:7439): GdkPixbuf-WARNING **: 00:03:02.546: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:03:02.54 
+may. 09, 2019 24:03:02.54 This likely means that your installation is broken.
+may. 09, 2019 24:03:02.54 Try running the command
+may. 09, 2019 24:03:02.54   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:03:02.54 to make things work again for the time being.
+may. 09, 2019 24:03:02.65 
+may. 09, 2019 24:03:02.65 (/usr/lib/firefox/firefox:7439): GdkPixbuf-WARNING **: 00:03:02.655: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:03:02.65 
+may. 09, 2019 24:03:02.65 This likely means that your installation is broken.
+may. 09, 2019 24:03:02.65 Try running the command
+may. 09, 2019 24:03:02.65   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:03:02.65 to make things work again for the time being.
+may. 09, 2019 24:05:36.96 
+may. 09, 2019 24:05:36.96 (/usr/lib/firefox/firefox:14932): GdkPixbuf-WARNING **: 00:05:36.967: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:05:36.96 
+may. 09, 2019 24:05:36.96 This likely means that your installation is broken.
+may. 09, 2019 24:05:36.96 Try running the command
+may. 09, 2019 24:05:36.96   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:05:36.96 to make things work again for the time being.
+may. 09, 2019 24:05:37.04 
+may. 09, 2019 24:05:37.04 (/usr/lib/firefox/firefox:14932): GdkPixbuf-WARNING **: 00:05:37.047: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:05:37.04 
+may. 09, 2019 24:05:37.04 This likely means that your installation is broken.
+may. 09, 2019 24:05:37.04 Try running the command
+may. 09, 2019 24:05:37.04   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:05:37.04 to make things work again for the time being.
+may. 09, 2019 24:05:51.63 
+may. 09, 2019 24:05:51.63 (/usr/lib/firefox/firefox:15210): GdkPixbuf-WARNING **: 00:05:51.630: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:05:51.63 
+may. 09, 2019 24:05:51.63 This likely means that your installation is broken.
+may. 09, 2019 24:05:51.63 Try running the command
+may. 09, 2019 24:05:51.63   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:05:51.63 to make things work again for the time being.
+may. 09, 2019 24:05:51.71 
+may. 09, 2019 24:05:51.71 (/usr/lib/firefox/firefox:15210): GdkPixbuf-WARNING **: 00:05:51.718: Cannot open pixbuf loader module file '/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache': No existe el archivo o el directorio
+may. 09, 2019 24:05:51.71 
+may. 09, 2019 24:05:51.71 This likely means that your installation is broken.
+may. 09, 2019 24:05:51.71 Try running the command
+may. 09, 2019 24:05:51.71   gdk-pixbuf-query-loaders > /usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders.cache
+may. 09, 2019 24:05:51.71 to make things work again for the time being.
+
+may. 11, 2019 10:06:24.29 NEW SESSION
+may. 11, 2019 10:06:24.29 
+may. 11, 2019 10:06:24.29 (/usr/lib/firefox/firefox:5456): dconf-WARNING **: 10:06:24.293: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 11, 2019 10:10:31.47 [Parent 5372, Gecko_IOThread] WARNING: pipe error (68): Conexión reinicializada por la máquina remota: file /build/firefox-oMDWhF/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 11, 2019 10:10:31.48 [Parent 5372, Gecko_IOThread] WARNING: pipe error (172): Conexión reinicializada por la máquina remota: file /build/firefox-oMDWhF/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 11, 2019 10:10:31.48 [Parent 5372, Gecko_IOThread] WARNING: pipe error (135): Conexión reinicializada por la máquina remota: file /build/firefox-oMDWhF/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+may. 11, 2019 17:47:53.85 NEW SESSION
+may. 11, 2019 17:47:53.85 
+may. 11, 2019 17:47:53.85 (/usr/lib/firefox/firefox:5151): dconf-WARNING **: 17:47:53.854: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 11, 2019 17:51:04.91 [Parent 4823, Gecko_IOThread] WARNING: pipe error (143): Conexión reinicializada por la máquina remota: file /build/firefox-oMDWhF/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 11, 2019 17:51:08.00 
+may. 11, 2019 17:51:08.00 (/usr/lib/firefox/firefox:5223): dconf-WARNING **: 17:51:08.007: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 11, 2019 17:52:36.76 [Parent 4823, Gecko_IOThread] WARNING: pipe error (153): Conexión reinicializada por la máquina remota: file /build/firefox-oMDWhF/firefox-66.0.4+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 11, 2019 17:52:39.45 
+may. 11, 2019 17:52:39.45 (/usr/lib/firefox/firefox:5683): dconf-WARNING **: 17:52:39.455: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+
+may. 15, 2019 08:55:37.41 NEW SESSION
+may. 15, 2019 08:55:37.41 [Parent 14048, Gecko_IOThread] WARNING: pipe error (109): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 15, 2019 08:55:37.41 [Parent 14048, Gecko_IOThread] WARNING: pipe error (55): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 15, 2019 08:55:38.92 [Parent 14048, Gecko_IOThread] WARNING: pipe error (107): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 15, 2019 08:55:38.92 [Parent 14048, Gecko_IOThread] WARNING: pipe error (151): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 15, 2019 08:56:15.36 
+may. 15, 2019 08:56:15.36 (/usr/lib/firefox/firefox:14812): dconf-WARNING **: 08:56:15.362: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 15, 2019 09:13:25.19 
+may. 15, 2019 09:13:25.19 (/usr/lib/firefox/firefox:15092): dconf-WARNING **: 09:13:25.198: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado

@@ -1,0 +1,7 @@
+14:53:05 **** Incremental Build of configuration Default for project AppWeb ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo 'all'.  Alto.
+"make all" terminated with exit code 2. Build might be incomplete.
+
+14:53:06 Build Failed. 1 errors, 0 warnings. (took 769ms)
+
