@@ -28,7 +28,7 @@ else
 		if (usuario == null) { %>
 			<noscript>
 				<p><span class="acceso">
-				Esta página necesita JavaScript para funcionar Prueba
+				Esta página necesita JavaScript para funcionar
 				</span></p>
 			</noscript>
 			<a id="botonAcceso"><span class='acceso'>Acceder</span></a>
