@@ -168,12 +168,14 @@ public class NotasDAO {
 		
 		try {
 			conn = ds.getConnection();
-			String sql = "INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen) VALUES (?,?,?,?)";
+			String sql = "INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen, categoria, color) VALUES (?,?,?,?,?,?)";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setString(1, nota.getNombreUsuario());
 			st.setString(2, nota.getTitulo());
 			st.setString(3, nota.getNota());
 			st.setString(4, nota.getUrlimagen());
+			st.setString(5, nota.getCategoria());
+			st.setString(6, nota.getColor());
 			System.out.println("Se va a insertar la nota del usuario="+nota.getNombreUsuario());
 			int contador = st.executeUpdate();
 			if (contador == 1) {
@@ -189,6 +191,41 @@ public class NotasDAO {
 			throw (new DAOException("Error en insertar(nota) de NotasDAO"));
 		}
 		return resultado;
+	}
+	
+	//tarea devuelve funciones de categoria
+	/**
+	 * Obtiene una lista de notas con las categorias e id solo.
+	 * @param usuario
+	 * @return Lista con las notas del usuario, o lista vacía
+	 */
+	public List<Nota> obtenerCategorias(String usuario) {
+		List<Nota> lista = new ArrayList<>();
+		Connection conn;
+		
+		try {
+			conn = ds.getConnection();
+			String sql = "SELECT id, categoria FROM notas WHERE nombre_usuario=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, usuario);
+			ResultSet rs = st.executeQuery();
+			System.out.println("Se van a buscar las categorias  del usuario="+usuario);
+			while (rs.next()) {
+				Nota nota = new Nota();
+				nota.setId(rs.getInt(1)); 
+				nota.setCategoria(rs.getString(2));
+				System.out.println("Se ha encontrado la nota con id="+nota.getId()+" y categoria="+nota.getCategoria());
+				lista.add(nota);
+			}
+			rs.close();
+			st.close();
+			conn.close();	
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+		}
+		return lista;
 	}
 	
 	

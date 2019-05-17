@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS notas (
   titulo VARCHAR(100) NOT NULL,
   nota TEXT,
   urlimagen TEXT,
+  categoria VARCHAR(20),
+  color VARCHAR(20),
   PRIMARY KEY (id),
   FOREIGN KEY (nombre_usuario) REFERENCES usuarios (nombre) ON DELETE CASCADE ON UPDATE CASCADE
 ) ;

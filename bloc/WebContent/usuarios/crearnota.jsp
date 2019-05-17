@@ -29,7 +29,7 @@
 		try {
 			// el nombre de usuario se obtiene del atributo de sesión usuario
 			nota.setNombreUsuario(usuario.getNombre());
-			if (!notas.insertar(nota)) {
+			if (!notas.insertar(nota)) {	//inserta todo el objeto nota, osea el bean nota
 				mensajeError = "No se ha podido insertar la nota";
 			}
 
@@ -40,7 +40,7 @@
 		//Muestra error o exito
 		if (!mensajeError.isEmpty()) {
 %>
-<div id="error">
+<div id="error" >
 	<p>
 		ERROR:
 		<%=mensajeError%>
@@ -62,56 +62,43 @@
 <div id="crear">
 	<h1>Crear nota</h1>
 	<div id="formcrear">
-		<form method="post" action="" onsubmit="">
+		<form method="post" action="" onsubmit="validacion()">
 			<div class="titulo-div">
-				<label for="titulo"><strong>T&iacute;tulo de la
-						nota</strong></label> <input id="titulo" type="text" value="" name="titulo"
-					maxlength="100" required="required"></input>
+				<label for="titulo">
+				<strong>T&iacute;tulo de la	nota</strong>
+				</label> 
+				<input id="titulo" type="text" value="" name="titulo"
+					maxlength="100" required="required">
+				</input>
 			</div>
-			<!-- tarea -->
-			<!-- 			<table>
-				<tr>
-					<td>
-						<div class="titulo-cat">
-							<label for="cat" id="labCat"><strong>Categoria</strong></label>
-					</td>
-					<td><select name="categoria" id="cat">
-							<option>trabajo</option>
-							<option>ocio</option>
-							<option>estudio</option>
-							<option>concentracion</option>
-					</select></td>
-					<td><input type="button" value="+"></td>
-					</div>
-				</tr>
-				
-			</table>
-			 -->
+
+
+
 			<div class="titulo-cat">
 
-				<label for="cat" id="labCat"><strong>Categoria</strong></label> <select
-					name="categoria" id="cat">
+				<label for="cat" id="labCat"><strong>Categoria</strong></label> 
+				<select	name="categoria" id="cat">
 					<option>trabajo</option>
-					<option>ocio</option>
-					<option>estudio</option>
-					<option>concentracion</option>
 				</select>
-				<input type="button" value="+">
-				
-				 <label for="color" id=labColor><strong>Color</strong></label>
-				 <select name="color" id="selColor">
-				 
-				 	<option>blue</option>
-					<option>green</option>
-					<option>red</option>
-					<option>yellow</option>
-				 </select> 
-				 <input type="color" id="butColor">
-				 
-				 
+				<button type="button" onclick="agregaCat()" id="addcat">+</button>
+
+
+
+
+
+
+				<label for="color" id=labColor><strong>Color</strong></label> 
+				<select	name="color" id="selColor">
+
+					<option>blue</option>
+					
+				</select> 
+				<input type="color" id="miColor" onclick="agregaColor()">
 
 
 			</div>
+
+
 
 
 			<div class="imagen-div">

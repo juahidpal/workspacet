@@ -118,7 +118,50 @@ function procesarResultadoBorrar(resultadoBorrar) {
 		ultid = -1;
 	}
 }
+//tarea
+function agregaCat() {
 
+	var select = document.getElementById("cat");
+	//crear elemento para insertar el valorIntro
+	var option = document.createElement("option");
+	//pedimos el nuevo texto 
+	var textoIntroducido = prompt("Introduce nueva categoria");
+	
+	option.text=textoIntroducido;
+	//ahora seleccionamos a donde queremos anhadir
+	select.appendChild(option);
+	
+	select.insertBefore(option,select.childNodes[0]);
+	
+	
+	//	agregamos un id al nuevo elemento
+	//option.setAttribute("id","idOption");
+	//hacemos focus al elemento
+	//selectOpciones[0].focus({preventScroll:true});
+	
+	
+}
+//tarea
+function agregaColor(){
+	var selectOpciones = document.getElementById("selColor");
+	//crear elemento para insertar el valorIntro
+	var option = document.createElement("option");
+	//seleccionamos el nuevo color
+	var color = document.getElementById("miColor").value;
+
+	option.text=color;
+	//ahora seleccionamos a donde queremos anhadir
+	selectOpciones.appendChild(option);
+	
+	var textArea = document.getElementById("nota");
+	//ahora cambiamos el color de textarea con el color seleccionado ateriormente
+	textArea.style.backgroundColor= color;
+	
+	
+}
+function validacion(){
+	//alert("has dado click al CREAR");
+}
 window.addEventListener("load", function() {
 	var infos = document.querySelectorAll(".infonota");
 	for(var i=0; i< infos.length; i++) {

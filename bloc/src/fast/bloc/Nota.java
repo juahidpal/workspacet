@@ -7,6 +7,22 @@ public class Nota {
 	private String titulo;
 	private String nota;
 	private String urlimagen;
+	private String categoria;
+	private String color;
+
+	
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
 	
 	public int getId() {
 		return id;

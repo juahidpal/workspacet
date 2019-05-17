@@ -6,6 +6,8 @@
 <jsp:useBean id="notas" class="fast.bloc.NotasDAO" scope="application" />
 <%
 List<Nota> lista = notas.obtenerTitulos(usuario.getNombre());
+List<Nota> listaCat = notas.obtenerCategorias(usuario.getNombre());
+
 %>
 
 
@@ -38,6 +40,30 @@ List<Nota> lista = notas.obtenerTitulos(usuario.getNombre());
 			}
 			%>
 			</table>
+		</div>
+		<h1>Por Categoria</h1>
+		<div id="categoria-div">
+			<table id="categoria-tabla">
+			
+				<%
+					for(Nota nota: listaCat){
+					//Generamos tabla						
+				%>
+					<tr id="fila-<%=nota.getId() %>">
+					
+						<td class="infonota">
+							<p><strong><%=nota.getCategoria() %></strong></p>
+							<div class="detalle" id="detalle-<%=nota.getId() %>" ></div>
+						
+						</td>
+					
+					</tr>
+				<%
+					}
+				%>
+			
+			</table>
+			
 		</div>
 
 	</div>
