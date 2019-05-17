@@ -130,9 +130,12 @@ function agregaCat() {
 	option.text=textoIntroducido;
 	//ahora seleccionamos a donde queremos anhadir
 	select.appendChild(option);
-	
+	//posicionamos en la parte superior
 	select.insertBefore(option,select.childNodes[0]);
 	
+	select.childNodes[0].selected = "true";
+	//document.getElementById("cat").style.backgroundColor = "red";
+	//alert("fin");
 	
 	//	agregamos un id al nuevo elemento
 	//option.setAttribute("id","idOption");
@@ -143,7 +146,7 @@ function agregaCat() {
 }
 //tarea
 function agregaColor(){
-	var selectOpciones = document.getElementById("selColor");
+	var select = document.getElementById("color");
 	//crear elemento para insertar el valorIntro
 	var option = document.createElement("option");
 	//seleccionamos el nuevo color
@@ -151,12 +154,17 @@ function agregaColor(){
 
 	option.text=color;
 	//ahora seleccionamos a donde queremos anhadir
-	selectOpciones.appendChild(option);
+	select.appendChild(option);
+	//posicionamos en la parte superior
+	select.insertBefore(option,select.childNodes[0]);
+	//hacemos un selected al color seleccionado
+	select.childNodes[0].selected = "true";
 	
 	var textArea = document.getElementById("nota");
 	//ahora cambiamos el color de textarea con el color seleccionado ateriormente
-	textArea.style.backgroundColor= color;
-	
+	//textArea.style.backgroundColor = color;
+	//probando a cambiar estilo de textarea
+	textArea.style.backgroundColor = color;
 	
 }
 function validacion(){

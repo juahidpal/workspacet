@@ -88,7 +88,7 @@
 
 
 				<label for="color" id=labColor><strong>Color</strong></label> 
-				<select	name="color" id="selColor">
+				<select	name="color" id="color">
 
 					<option>blue</option>
 					

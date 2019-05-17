@@ -76,6 +76,8 @@ public class NotasDAO {
 		ejemplo.setNota("Esta es una nota de ejemplo.");
 		ejemplo.setTitulo("Título de la nota");
 		ejemplo.setUrlimagen("imagenes/nota.png");
+		ejemplo.setCategoria("CategoriaEjemplo");
+		ejemplo.setColor("colorEjemplo");
 		
 		return ejemplo;
 	}
@@ -106,6 +108,8 @@ public class NotasDAO {
 				nota.setTitulo(rs.getString(3));
 				nota.setNota(rs.getString(4));
 				nota.setUrlimagen(rs.getString(5));
+				nota.setCategoria(rs.getString(6));
+				nota.setColor(rs.getString(7));
 				System.out.println("Se ha encontrado la nota con id="+nota.getId());
 			}
 			rs.close();
@@ -199,22 +203,52 @@ public class NotasDAO {
 	 * @param usuario
 	 * @return Lista con las notas del usuario, o lista vacía
 	 */
-	public List<Nota> obtenerCategorias(String usuario) {
-		List<Nota> lista = new ArrayList<>();
+	public List<String> obtenerCategorias(String usuario) {
+		List<String> lista = new ArrayList<String>();
 		Connection conn;
 		
 		try {
 			conn = ds.getConnection();
-			String sql = "SELECT id, categoria FROM notas WHERE nombre_usuario=?";
+			String sql = "SELECT DISTINCT categoria FROM notas WHERE nombre_usuario=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setString(1, usuario);
 			ResultSet rs = st.executeQuery();
 			System.out.println("Se van a buscar las categorias  del usuario="+usuario);
 			while (rs.next()) {
+
+				lista.add(rs.getString(1));
+			}
+			rs.close();
+			st.close();
+			conn.close();	
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+		}
+		return lista;
+	}
+	/**
+	 * Obtiene una lista de notas con los colores e id solo.
+	 * @param usuario
+	 * @return Lista con las notas del usuario, o lista vacía
+	 */
+	public List<Nota> obtenerColores(String usuario) {
+		List<Nota> lista = new ArrayList<>();
+		Connection conn;
+		
+		try {
+			conn = ds.getConnection();
+			String sql = "SELECT id, color FROM notas WHERE nombre_usuario=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, usuario);
+			ResultSet rs = st.executeQuery();
+			System.out.println("Se van a buscar las notas  del usuario="+usuario);
+			while (rs.next()) {
 				Nota nota = new Nota();
 				nota.setId(rs.getInt(1)); 
-				nota.setCategoria(rs.getString(2));
-				System.out.println("Se ha encontrado la nota con id="+nota.getId()+" y categoria="+nota.getCategoria());
+				nota.setColor(rs.getString(2));
+				System.out.println("Se ha encontrado la nota con id="+nota.getId()+" y color="+nota.getColor());
 				lista.add(nota);
 			}
 			rs.close();
@@ -227,6 +261,5 @@ public class NotasDAO {
 		}
 		return lista;
 	}
-	
 	
 }
