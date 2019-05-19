@@ -97,3 +97,31 @@ may. 17, 2019 02:10:23.22 [Parent 3052, Gecko_IOThread] WARNING: pipe error (62)
 may. 17, 2019 02:10:23.22 [Parent 3052, Gecko_IOThread] WARNING: pipe error (202): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 may. 17, 2019 02:10:23.23 [Parent 3052, Gecko_IOThread] WARNING: pipe error (181): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 may. 17, 2019 02:10:23.24 [Parent 3052, Gecko_IOThread] WARNING: pipe error (115): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+may. 18, 2019 24:56:11.74 NEW SESSION
+may. 18, 2019 24:56:11.74 
+may. 18, 2019 24:56:11.74 (/usr/lib/firefox/firefox:4545): dconf-WARNING **: 00:56:11.745: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:02:47.44 
+may. 18, 2019 01:02:47.44 (/usr/lib/firefox/firefox:4819): dconf-WARNING **: 01:02:47.447: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:26:44.16 
+may. 18, 2019 01:26:44.16 (/usr/lib/firefox/firefox:5733): dconf-WARNING **: 01:26:44.166: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:35:31.49 [Parent 4460, Gecko_IOThread] WARNING: pipe error (103): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 18, 2019 01:35:43.93 
+may. 18, 2019 01:35:43.93 (/usr/lib/firefox/firefox:7338): dconf-WARNING **: 01:35:43.936: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:44:06.47 
+may. 18, 2019 01:44:06.47 (/usr/lib/firefox/firefox:7436): dconf-WARNING **: 01:44:06.475: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:44:51.51 [Parent 4460, Gecko_IOThread] WARNING: pipe error (146): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 18, 2019 01:45:00.80 
+may. 18, 2019 01:45:00.80 (/usr/lib/firefox/firefox:7872): dconf-WARNING **: 01:45:00.806: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:48:19.84 
+may. 18, 2019 01:48:19.84 (/usr/lib/firefox/firefox:7939): dconf-WARNING **: 01:48:19.844: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 01:52:27.83 
+may. 18, 2019 01:52:27.83 (/usr/lib/firefox/firefox:8680): dconf-WARNING **: 01:52:27.837: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+
+may. 18, 2019 08:28:15.53 NEW SESSION
+may. 18, 2019 08:28:15.53 
+may. 18, 2019 08:28:15.53 (/usr/lib/firefox/firefox:4434): dconf-WARNING **: 08:28:15.528: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+may. 18, 2019 08:30:19.49 [Parent 4349, Gecko_IOThread] WARNING: pipe error (198): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 18, 2019 08:56:16.33 [Parent 4349, Gecko_IOThread] WARNING: pipe error (61): Conexión reinicializada por la máquina remota: file /build/firefox-kqTGhi/firefox-66.0.5+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+may. 18, 2019 08:57:42.40 
+may. 18, 2019 08:57:42.40 (/usr/lib/firefox/firefox:6262): dconf-WARNING **: 08:57:42.406: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
