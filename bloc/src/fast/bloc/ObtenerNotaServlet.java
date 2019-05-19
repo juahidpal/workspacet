@@ -47,10 +47,9 @@ public class ObtenerNotaServlet extends HttpServlet {
 		// lo hacemos directamente
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
-		response.getWriter().println(
-				"{ \"nota\":\"" + nota.getNota() + "\" , \"imagen\":\"" + nota.getUrlimagen()
-				+ "\", \"error\":\"" + mensajeError + "\" }");
-	
+		response.getWriter().println("{\"nota\":\""+ nota.getNota() +"\",\"imagen\":\"" + nota.getUrlimagen()+"\",\"categoria\":\"" +nota.getCategoria()+"\",\"color\":\""+nota.getColor()+"\",\"error\":\""+ mensajeError +"\"}");
+		System.out.println("{\"nota\":\""+nota.getNota()+"\",\"imagen\":\""+nota.getUrlimagen()+"\",\"categoria\":\"" +nota.getCategoria()+"\",\"color\":\""+nota.getColor()+"\",\"error\":\""+mensajeError+"\"}");
+		
 	}
 
 }

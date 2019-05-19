@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+
 public class NotasDAO {
 	private DataSource ds = null;
 	
@@ -209,15 +210,16 @@ public class NotasDAO {
 		
 		try {
 			conn = ds.getConnection();
-			String sql = "SELECT DISTINCT categoria FROM notas WHERE nombre_usuario=?";
+			String sql = "SELECT DISTINCT id, categoria FROM notas WHERE nombre_usuario=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setString(1, usuario);
 			ResultSet rs = st.executeQuery();
 			System.out.println("Se van a buscar las categorias  del usuario="+usuario);
 			while (rs.next()) {
-
+				
 				lista.add(rs.getString(1));
-				System.out.println("DEBUG: se han encontrado estos elementos: " +lista);
+				lista.add(rs.getString(2));
+				//System.out.println("DEBUG: se han encontrado estos elementos: " +lista);
 			}
 			rs.close();
 			st.close();
@@ -263,4 +265,16 @@ public class NotasDAO {
 		return lista;
 	}
 	
+		public int getArrayIndex(List<String> arr,String value) {
+	
+	        int k=0;
+	        for(int i=0;i<arr.size();i++){
+	
+	            if(arr.get(i).equals(value)){
+	                k=i;
+	                break;
+	            }
+	        }
+	    return k;
+}
 }

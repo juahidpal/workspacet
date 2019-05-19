@@ -3,5 +3,7 @@
 	<section name="contentassistsize">
 		<item value="244" key="size.y"/>
 		<item value="359" key="size.x"/>
+		<item value="226" key="contextSelector.size.y"/>
+		<item value="316" key="contextSelector.size.x"/>
 	</section>
 </section>

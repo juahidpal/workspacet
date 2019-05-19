@@ -1,12 +1,16 @@
+<%@page import="fast.bloc.ObtenerNotaServlet"%>
+<%@page import="fast.bloc.BorrarNotaServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.util.List, fast.bloc.Nota"%>
+	
+
+
 
 <jsp:useBean id="usuario" class="fast.bloc.Usuario" scope="session" />
 <jsp:useBean id="notas" class="fast.bloc.NotasDAO" scope="application" />
 <%
 	List<Nota> lista = notas.obtenerTitulos(usuario.getNombre());
 	List<String> listaCat = notas.obtenerCategorias(usuario.getNombre());
-	System.out.println(listaCat);
 %>
 
 
@@ -25,26 +29,35 @@
 	<h1>Lista de notas</h1>
 	<div id="lista-div">
 		<table id="lista-tabla">
-			<%! int contador = 0;
-				String var;%>
+		<%! private String valorIdTituloString;
+			private int valorIdParaListaCat;
+		%>
 			<%
 				for (Nota nota : lista) {
 					//Generamos tabla
+					
+					valorIdTituloString = Integer.toString(nota.getId());
+
 			%>
 			<tr id='fila-<%=nota.getId()%>'>
 				<td class="infonota">
 					<p>	<strong><%=nota.getTitulo()%></strong>	</p>
 					
-					<%if(contador < listaCat.size()){%>
+					<%if(listaCat.contains(valorIdTituloString)){
 						
-						<p><strong>Categoria: </strong><%=listaCat.get(contador)%></p>
-						<% }else{
-						contador=0;
-						}%>
-					<%contador++; %>
+						//System.out.println("se ha encontrado id: " + valorIdTituloString);	
+						int indexNum = notas.getArrayIndex(listaCat,valorIdTituloString);
+					//	System.out.println("index: "+ indexNum +  ", id: " + valorIdTituloString);	
+
+					%>
+						<p>Categoria: <%=listaCat.get(indexNum+1) %></p>					
 					
+					<%} %>
 					
 					<div class='detalle' id='detalle-<%=nota.getId()%>'></div>
+					
+					
+					
 				</td>
 			</tr>
 			<%

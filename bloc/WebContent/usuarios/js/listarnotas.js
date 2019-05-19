@@ -1,7 +1,7 @@
 "use strict";
 
 //Indica el id de la ultima nota cuyo detalle se ha mostrado
-var ultid=-1;
+var ultid=-1;//variable global
 
 //Esta funcion sirve para mostrar un mensaje mientras se obtienen los detalles
 function mostrarEsperando(elemento) {
@@ -20,9 +20,9 @@ function mostrarDetalle(elemento, objetoDetalle) {
 		elemento.innerHTML="<p>Error: "+objetoDetalle.error+"</p>";
 	} else {
 		elemento.innerHTML=
-			"<p class='textonota'>"+
+			"<p class='textonota' style='background-color:"+objetoDetalle.color+"'>"+
 			objetoDetalle.nota+"</p><p>"+
-			"<img src='"+objetoDetalle.imagen+"' alt='Sin imagen' /><br />"+
+			"<img src='"+objetoDetalle.imagen+"' style='background-color:"+objetoDetalle.color+"' alt='Sin imagen' /><br />"+
 			"<button class='boton' onclick='borrar(event, ultid);'>Borrar</button></p>";
 	}
 }
@@ -47,6 +47,8 @@ function mostrar() {
 		mostrarEsperando(divDetalle);
 		divDetalle.style.display="block"; //Hacemos visible
 
+		
+		
 		//Peticion AJAX
 		var peticion="nota?id="+ultid;
 		var xmlhttp = new XMLHttpRequest();
