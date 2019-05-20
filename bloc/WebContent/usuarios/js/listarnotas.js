@@ -20,10 +20,10 @@ function mostrarDetalle(elemento, objetoDetalle) {
 		elemento.innerHTML="<p>Error: "+objetoDetalle.error+"</p>";
 	} else {
 		elemento.innerHTML=
-			"<p class='textonota' style='background-color:"+objetoDetalle.color+"'>"+
-			objetoDetalle.nota+"</p><p>"+
-			"<img src='"+objetoDetalle.imagen+"' style='background-color:"+objetoDetalle.color+"' alt='Sin imagen' /><br />"+
-			"<button class='boton' onclick='borrar(event, ultid);'>Borrar</button></p>";
+			"<div style='background-color:"+objetoDetalle.color+" '><p class='textonota' style='background-color:"+objetoDetalle.color+"'>"+
+			objetoDetalle.nota+"</p><p style='background-color:"+objetoDetalle.color+"'>"+
+			"<img src='"+objetoDetalle.imagen+"' style='background-color:"+objetoDetalle.color+"' alt='Sin imagen'  height="+100+" /><br />"+
+			"<button class='boton' onclick='borrar(event, ultid);'>Borrar</button></p></div>";
 	}
 }
 
@@ -46,6 +46,7 @@ function mostrar() {
 		var divDetalle = document.getElementById("detalle-"+ultid);
 		mostrarEsperando(divDetalle);
 		divDetalle.style.display="block"; //Hacemos visible
+
 
 		
 		

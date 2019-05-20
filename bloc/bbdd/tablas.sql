@@ -47,4 +47,8 @@ INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALU
 INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('usuario','Nota de prueba 5','Esta es la nota 5','../imagenes/nota2.png','FAST','DARKSIDE');
 INSERT INTO usuarios VALUES('admin','clave',0);
 INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','Nota de prueba 6','Esta es la nota 6','../imagenes/nota2.png','FASTadmin','WHITESIDE');
-
+INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','Nota de Leo','Esta es la nota de Leo','../imagenes/leo.jpg','mascota','green');
+INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','Nota de Narcy Lucero y Leo','Esta es la nota de narcyLuceroLeo','../imagenes/narcyLuceroLeo.jpg','mascota','blue');
+INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','NINO','Esta es la nota de NINO','../imagenes/nino.jpg','amiga','orange');
+INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','LINUX','Esta es la nota de LINUX','../imagenes/linux.jpg','Sistema Operativo','red');
+INSERT INTO notas (nombre_usuario, titulo, nota, urlimagen,categoria,color) VALUES('admin','ROLANDO','Esta es la nota de Rolando','../imagenes/rolo.jpg','Persona','yellow');

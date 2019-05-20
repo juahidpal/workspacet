@@ -20,9 +20,25 @@
 			</span></a>
 		</li>
 		<li>
-			<a href="listarnotas.jsp"><span class="fondo">
-				<span class="textoopcion">Mostrar</span>
-			</span></a></li>
+			<a href="listarnotas.jsp"><span class="fondo">	<span class="textoopcion">Mostrar</span></span>
+			</a>
+		</li>
+		
+		<!-- preguntamos si usuario es tipo administrador osea "0" -->
+			
+		<%if(usuario.getTipo_usu()==0){
+			//System.out.println("DEBUG::::::::::::::es administrador");
+		%>
+			<li>
+				<a href="listarnotas.jsp"><span class="fondo">	<span class="textoopcion">Mostrar todas</span></span></a>
+			</li>
+			
+			
+		<%}else{
+			//System.out.println("DEBUG::::::::::::::NOOOOOOOO es administrador");
+
+		}%>	
+		
 		</ol>
 	</div>
 
