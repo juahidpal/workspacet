@@ -1,7 +1,11 @@
 INDEX VERSION 1.131
 /home/dit/workspacet/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3131367362.index
 /bloc/src
+/home/dit/workspacet/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4164523351.index
+/bloc/src
 /home/dit/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/691232689.index
+/bloc/src
+/home/dit/workspacet/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4158324339.index
 /bloc/src
 /home/dit/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3131367362.index
 /bloc/src

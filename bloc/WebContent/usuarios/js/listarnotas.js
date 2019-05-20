@@ -20,8 +20,8 @@ function mostrarDetalle(elemento, objetoDetalle) {
 		elemento.innerHTML="<p>Error: "+objetoDetalle.error+"</p>";
 	} else {
 		elemento.innerHTML=
-			"<div style='background-color:"+objetoDetalle.color+" '><p class='textonota' style='background-color:"+objetoDetalle.color+"'>"+
-			objetoDetalle.nota+"</p><p style='background-color:"+objetoDetalle.color+"'>"+
+			"<p>Categoria: "+objetoDetalle.categoria+"</p> <div style='background-color:"+objetoDetalle.color+" '><p class='textonota' style='background-color:"+objetoDetalle.color+"'>"+
+			objetoDetalle.nota+"</p>  <p style='background-color:"+objetoDetalle.color+"'>"+
 			"<img src='"+objetoDetalle.imagen+"' style='background-color:"+objetoDetalle.color+"' alt='Sin imagen'  height="+100+" /><br />"+
 			"<button class='boton' onclick='borrar(event, ultid);'>Borrar</button></p></div>";
 	}
@@ -51,7 +51,7 @@ function mostrar() {
 		
 		
 		//Peticion AJAX
-		var peticion="nota?id="+ultid;
+		var peticion="nota";
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("POST",peticion,true);
 		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
