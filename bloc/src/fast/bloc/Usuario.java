@@ -11,6 +11,8 @@ public class Usuario {
 	public int getTipo_usu() {
 		return tipo_usu;
 	}
+	
+	
 
 	public void setTipo_usu(int tipo_usu) {
 		this.tipo_usu = tipo_usu;

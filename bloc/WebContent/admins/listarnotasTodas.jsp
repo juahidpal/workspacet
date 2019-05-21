@@ -11,6 +11,8 @@
 <%
 	List<Nota> lista = notas.obtenerTitulos();
 	//List<String> listaCat = notas.obtenerCategorias(usuario.getNombre());
+	
+
 %>
 
 
@@ -31,17 +33,25 @@
 		<table id="lista-tabla">
 		<%! private String valorIdTituloString;
 			private int valorIdParaListaCat;
+			int notaId;
+			int tipoUsu;
 		%>
 			<%
 				for (Nota nota : lista) {
 					//Generamos tabla
 					
 					valorIdTituloString = Integer.toString(nota.getId());
-
-			%>
+					
+					notaId = nota.getId();
+					tipoUsu = usuario.getTipo_usu();
+					notas.obtener(notaId, Integer.toString(tipoUsu));
+					
+					System.out.println("DEBUG:::::::"+ notaId + " "+ tipoUsu);
+							
+							%>
 			<tr id='fila-<%=nota.getId()%>'>
 				<td class="infonota">
-					<p>	<strong><%=nota.getTitulo()%></strong>	</p>
+					<p>	<strong><%=nota.getTitulo()%></strong>	: </p>
 					
 					
 					
