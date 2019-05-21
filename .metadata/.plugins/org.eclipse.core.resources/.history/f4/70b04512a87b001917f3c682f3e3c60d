@@ -3,7 +3,6 @@
 	
 <jsp:useBean id="usuario" class="fast.bloc.Usuario" scope="session" />
 
-
 <!DOCTYPE html>
 <html>
   <head>

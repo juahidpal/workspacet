@@ -212,8 +212,6 @@ public class NotasDAO {
 			String sql = "SELECT DISTINCT id, categoria FROM notas WHERE nombre_usuario=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setString(1, usuario);
-			
-
 			ResultSet rs = st.executeQuery();
 			System.out.println("Se van a buscar las categorias  del usuario=" + usuario);
 			while (rs.next()) {
