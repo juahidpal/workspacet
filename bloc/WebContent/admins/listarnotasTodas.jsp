@@ -40,20 +40,20 @@
 				for (Nota nota : lista) {
 					//Generamos tabla
 					
-					valorIdTituloString = Integer.toString(nota.getId());
+					//valorIdTituloString = Integer.toString(nota.getId());
 					
-					notaId = nota.getId();
-					tipoUsu = usuario.getTipo_usu();
-					notas.obtener(notaId, Integer.toString(tipoUsu));
 					
-					System.out.println("DEBUG:::::::"+ notaId + " "+ tipoUsu);
+					
+					//System.out.println("DEBUG:::::::"+ notaId + " "+ tipoUsu);
 							
 							%>
 			<tr id='fila-<%=nota.getId()%>'>
 				<td class="infonota">
-					<p>	<strong><%=nota.getTitulo()%></strong>	: </p>
+					<p>	<strong><%=nota.getTitulo()%></strong>	:<strong><%=nota.getNombreUsuario() %></strong></p>
 					
-					
+					<!-- <%-- 		<p>ID <%=nota.getId() %>: NOTA: <%=notas.obtener(nota.getId()) %></p>
+					 --%>
+					 -->
 					
 					<%-- 
 					OTRA SOLUCION

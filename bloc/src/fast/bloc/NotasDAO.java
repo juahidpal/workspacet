@@ -70,16 +70,53 @@ public class NotasDAO {
 
 	public Nota obtener(int id) throws DAOException {
 		// TODO pruebas
-		Nota ejemplo = new Nota();
-		ejemplo.setId(id);
-		ejemplo.setNombreUsuario("usuario");
-		ejemplo.setNota("Esta es una nota de ejemplo.");
-		ejemplo.setTitulo("Título de la nota");
-		ejemplo.setUrlimagen("imagenes/nota.png");
-		ejemplo.setCategoria("CategoriaEjemplo");
-		ejemplo.setColor("colorEjemplo");
+		/*
+		 * Nota ejemplo = new Nota(); ejemplo.setId(id);
+		 * ejemplo.setNombreUsuario("usuario");
+		 * ejemplo.setNota("Esta es una nota de ejemplo.");
+		 * ejemplo.setTitulo("Título de la nota");
+		 * ejemplo.setUrlimagen("imagenes/nota.png");
+		 * ejemplo.setCategoria("CategoriaEjemplo"); ejemplo.setColor("colorEjemplo");
+		 * 
+		 * return ejemplo;
+		 * 
+		 */
 
-		return ejemplo;
+		Nota nota = null;
+		Connection conn;
+		try {
+			conn = ds.getConnection();
+			String sql = "SELECT * FROM notas WHERE id=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setInt(1, id);
+			ResultSet rs = st.executeQuery();
+			System.out.println("Se van a buscar la nota con id=" + id);
+			if (rs.next()) {
+				nota = new Nota();
+				nota.setId(rs.getInt(1));
+				nota.setNombreUsuario(rs.getString(2));
+				nota.setTitulo(rs.getString(3));
+				nota.setNota(rs.getString(4));
+				nota.setUrlimagen(rs.getString(5));
+				nota.setCategoria(rs.getString(6));
+				nota.setColor(rs.getString(7)); 
+				System.out.println("Se ha encontrado la nota con id= " + nota.getId()+
+						" titulo: " + nota.getTitulo()+
+						" nota: " + nota.getNota()+
+						" urlImagen: "+ nota.getUrlimagen()+
+						" categoria: "+nota.getCategoria()+
+						" color: " + nota.getColor());
+			}
+			rs.close();
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+			throw (new DAOException("Error en obtener(id,usuario) de NotasDAO"));
+		}
+		return nota;
+
 	}
 
 	/**
@@ -212,7 +249,6 @@ public class NotasDAO {
 			String sql = "SELECT DISTINCT id, categoria FROM notas WHERE nombre_usuario=?";
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setString(1, usuario);
-			
 
 			ResultSet rs = st.executeQuery();
 			System.out.println("Se van a buscar las categorias  del usuario=" + usuario);
@@ -278,40 +314,41 @@ public class NotasDAO {
 		}
 		return k;
 	}
-	
+
 	/**
-	 * TAREA 2
-	 * Obtiene una lista de notas con los títulos e id solo.
+	 * TAREA 2 Obtiene una lista de notas con los títulos e id solo.
+	 * 
 	 * @param usuario
 	 * @return Lista con las notas del usuario, o lista vacía
 	 */
 	public List<Nota> obtenerTitulos() {
 		List<Nota> lista = new ArrayList<>();
 		Connection conn;
-		
+
 		try {
 			conn = ds.getConnection();
-			String sql = "SELECT id, titulo FROM notas ";
+			String sql = "SELECT id, titulo, nombre_usuario FROM notas ";
 			PreparedStatement st = conn.prepareStatement(sql);
-			//st.setString(1, usuario);
+			// st.setString(1, usuario);
 			ResultSet rs = st.executeQuery();
 			System.out.println("Se van a buscar las notas  del usuario de usuarios y admistrador");
 			while (rs.next()) {
 				Nota nota = new Nota();
-				nota.setId(rs.getInt(1)); 
+				nota.setId(rs.getInt(1));
 				nota.setTitulo(rs.getString(2));
-				System.out.println("Se ha encontrado la nota con id="+nota.getId()+" y titulo="+nota.getTitulo());
+				nota.setNombreUsuario(rs.getString(3));
+
+				System.out.println("Se ha encontrado la nota con id=" + nota.getId() + " y titulo=" + nota.getTitulo());
 				lista.add(nota);
 			}
 			rs.close();
 			st.close();
-			conn.close();	
-		}
-		catch (SQLException e) {
+			conn.close();
+		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Error de acceso a la base de datos. NotasDAO.");
 		}
 		return lista;
 	}
-	
+
 }
