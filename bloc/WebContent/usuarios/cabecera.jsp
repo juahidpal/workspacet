@@ -1,6 +1,6 @@
 	<div id="cabecera">
 		<div id="logotipo">
-				<a href="${pageContext.request.contextPath}/imagenes/blocnotasfast-p.png">
+				<a href="${pageContext.request.contextPath}/menu.jsp">
 				<img src="${pageContext.request.contextPath}/imagenes/blocnotasfast-p.png" alt="Bloc de Notas FAST" />
 				</a>
 		</div>

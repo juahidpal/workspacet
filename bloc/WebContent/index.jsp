@@ -68,7 +68,7 @@ else
 		<%
 		if (usuario!=null) {
 		%>
-			<h3><a href="usuarios/menu.jsp">Menú</a></h3>
+			<h3><a href="menu.jsp">Menú</a></h3>
 		<%
 		} else {
 		%>
