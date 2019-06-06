@@ -357,10 +357,30 @@ public class NotasDAO {
 		
 		List<String> lista = new ArrayList<>();
 		Connection conn;
-		
-		
-		
-		return false;
+
+		try {
+			conn = ds.getConnection();
+			String sql = "SELECT nota FROM notas WHERE nombre_usuario=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, usuario);
+			ResultSet rs = st.executeQuery();
+			System.out.println("Se van a buscar el campo nota de las notas del usuario=" + usuario);
+			while (rs.next()) {
+				/*Nota nota = new Nota();
+				nota.setNota(rs.getString(1));
+				nota.setTitulo(rs.getString(2));*/
+				
+				//System.out.println("Se ha encontrado la nota con id=" + nota.getId() + " y titulo=" + nota.getTitulo());
+				lista.add(rs.getString(1));
+			}
+			rs.close();
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+		}
+		return lista;
 		
 	}
 	

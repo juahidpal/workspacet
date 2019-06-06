@@ -20,8 +20,8 @@
     <fullyQualifiedTypeName name="java.lang.StrictMath"/>
     <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.ListAdapter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-    <fullyQualifiedTypeName name="fast.bloc.Usuario"/>
-    <fullyQualifiedTypeName name="fast.bloc.NotasDAO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="fast.bloc.Usuario"/>
+    <fullyQualifiedTypeName name="fast.bloc.NotasDAO"/>
 </qualifiedTypeNameHistroy>

@@ -92,3 +92,4 @@ Caused by: java.net.UnknownHostException: download.eclipse.org
 2019-05-22 15:23:40,307 [Worker-36: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-catalina/8.5.37/tomcat-catalina-8.5.37-sources.jar
 2019-05-22 15:23:40,388 [Worker-31: JDI thread evaluations] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-catalina/8.5.37/tomcat-catalina-8.5.37-sources.jar
 2019-06-05 11:07:49,398 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-06 15:25:17,187 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

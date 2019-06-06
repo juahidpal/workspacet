@@ -1,5 +1,6 @@
 package fast.bloc;
 
+import fast.bloc.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,40 +40,63 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 		NotasDAO notas = (NotasDAO) getServletContext().getAttribute("notas");
 		
 		int numMensajes = 0;
-		
 		float mediaMensajes = 0;
-		List <Nota> listaNotas = new ArrayList<>();
 		
-		if(usuario.getTipo_usu()==fast.bloc.Usuario.ADMINISTRADOR) {
+		
+		List <String> listaNotas = new ArrayList<>();
+		
+		
+		if(usuario.getTipo_usu()==Usuario.ADMINISTRADOR) {
 			
+			listaNotas = notas.devuelveNota(usuario.getNombre());
 			
-			listaNotas = notas.obtenerTitulos(usuario.getNombre());
-			
-			for(Nota cuentaNota : listaNotas) {
+			for (String cuentaNota : listaNotas) {
 				numMensajes++;
+				
+				mediaMensajes += cuentaNota.length();
+				
+				
 			}
-			//hay que hacerle la media de las notas
-			
-			
-			
-			
+			mediaMensajes = mediaMensajes/numMensajes;
 			
 			
 		}else {
-			listaNotas = notas.obtenerTitulos(usuario.getNombre());
 			
-			for(Nota cuentaNota : listaNotas) {
-				numMensajes++;
-			}
 		}
+			
 		
-		System.out.println("{\"numMensajes\":\""+ numMensajes +"\"}");
+		/*
+		 * if(usuario.getTipo_usu()==fast.bloc.Usuario.ADMINISTRADOR) {
+		 * 
+		 * 
+		 * listaNotas = notas.obtenerTitulos(usuario.getNombre());
+		 * 
+		 * for(Nota cuentaNota : listaNotas) { numMensajes++; //usamos metodo
+		 * devuelveNota(usuario.getNombre());
+		 * 
+		 * 
+		 * } //hay que hacerle la media de las notas
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * }else { listaNotas = notas.obtenerTitulos(usuario.getNombre());
+		 * 
+		 * for(Nota cuentaNota : listaNotas) { numMensajes++; }
+		 */
+		
+		//}
+		
+		System.out.println("{\"numMensajes\": "+ numMensajes +",\"mediaMensajes\": "+mediaMensajes+"}");
 		//La creación de JSON se puede simplificar usando librerías, pero aquí
 		// lo hacemos directamente
-		response.setContentType("application/json");
-		response.setCharacterEncoding("UTF-8");
-		response.getWriter().println("{\"numMensajes\":\""+ numMensajes +"\"}");
-				
+		
+		  response.setContentType("application/json");
+		  response.setCharacterEncoding("UTF-8");
+		 // response.getWriter().println("{\"numMensajes\": "+ numMensajes +", \"mediaMensajes\": "+mediaMensajes+ "}");
+			response.getWriter().println("{ \"numMensajes\": " + numMensajes + ", \"mediaMensajes\": " + mediaMensajes + "}");	
 	}
 
 	/**
