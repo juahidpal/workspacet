@@ -48,35 +48,29 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 
 			if (todos != null) {
 				// hacemos todos
-				List<String> listaTodosA = new ArrayList<>();
-				List<String> listaTodosB = new ArrayList<>();
-				List<String> listaTodosC = new ArrayList<>();
+				List<String> listaTodos = new ArrayList<>();
+				listaTodos = notas.devuelveNota("usuario");
 
-				listaTodosA = notas.devuelveNota("usuario");
-				listaTodosB = notas.devuelveNota("admin");
-
-				listaTodosC.addAll(listaTodosA);
-				listaTodosC.addAll(listaTodosB);
-
-				for (String cuentaNota : listaTodosC) {
+				for (String cuentaNota : listaTodos) {
 					numMensajes++;
 
 					mediaMensajes += cuentaNota.length();
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
 
+				}
 			} else {
 
-				listaNotas = notas.devuelveNota(usuario.getNombre());
-
-				for (String cuentaNota : listaNotas) {
-					numMensajes++;
-
-					mediaMensajes += cuentaNota.length();
-
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
 			}
+
+			listaNotas = notas.devuelveNota(usuario.getNombre());
+
+			for (String cuentaNota : listaNotas) {
+				numMensajes++;
+
+				mediaMensajes += cuentaNota.length();
+
+			}
+			mediaMensajes = mediaMensajes / numMensajes;
+
 		} else {
 
 			listaNotas = notas.devuelveNota(usuario.getNombre());

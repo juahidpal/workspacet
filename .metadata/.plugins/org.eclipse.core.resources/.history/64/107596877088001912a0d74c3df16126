@@ -57,26 +57,26 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 
 				listaTodosC.addAll(listaTodosA);
 				listaTodosC.addAll(listaTodosB);
-
-				for (String cuentaNota : listaTodosC) {
-					numMensajes++;
-
-					mediaMensajes += cuentaNota.length();
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
-
-			} else {
-
-				listaNotas = notas.devuelveNota(usuario.getNombre());
-
-				for (String cuentaNota : listaNotas) {
+				
+				
+				for (String cuentaNota : listaTodos) {
 					numMensajes++;
 
 					mediaMensajes += cuentaNota.length();
 
 				}
-				mediaMensajes = mediaMensajes / numMensajes;
 			}
+
+			listaNotas = notas.devuelveNota(usuario.getNombre());
+
+			for (String cuentaNota : listaNotas) {
+				numMensajes++;
+
+				mediaMensajes += cuentaNota.length();
+
+			}
+			mediaMensajes = mediaMensajes / numMensajes;
+
 		} else {
 
 			listaNotas = notas.devuelveNota(usuario.getNombre());

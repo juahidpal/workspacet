@@ -62,9 +62,8 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 					numMensajes++;
 
 					mediaMensajes += cuentaNota.length();
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
 
+				}
 			} else {
 
 				listaNotas = notas.devuelveNota(usuario.getNombre());

@@ -37,8 +37,6 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 
 		NotasDAO notas = (NotasDAO) getServletContext().getAttribute("notas");
 
-		String todos = request.getParameter("todos");
-
 		int numMensajes = 0;
 		float mediaMensajes = 0;
 
@@ -46,37 +44,16 @@ public class ObtenerEstadisticasServlet extends HttpServlet {
 
 		if (usuario.getTipo_usu() == Usuario.ADMINISTRADOR) {
 
-			if (todos != null) {
-				// hacemos todos
-				List<String> listaTodosA = new ArrayList<>();
-				List<String> listaTodosB = new ArrayList<>();
-				List<String> listaTodosC = new ArrayList<>();
+			listaNotas = notas.devuelveNota(usuario.getNombre());
 
-				listaTodosA = notas.devuelveNota("usuario");
-				listaTodosB = notas.devuelveNota("admin");
+			for (String cuentaNota : listaNotas) {
+				numMensajes++;
 
-				listaTodosC.addAll(listaTodosA);
-				listaTodosC.addAll(listaTodosB);
+				mediaMensajes += cuentaNota.length();
 
-				for (String cuentaNota : listaTodosC) {
-					numMensajes++;
-
-					mediaMensajes += cuentaNota.length();
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
-
-			} else {
-
-				listaNotas = notas.devuelveNota(usuario.getNombre());
-
-				for (String cuentaNota : listaNotas) {
-					numMensajes++;
-
-					mediaMensajes += cuentaNota.length();
-
-				}
-				mediaMensajes = mediaMensajes / numMensajes;
 			}
+			mediaMensajes = mediaMensajes / numMensajes;
+
 		} else {
 
 			listaNotas = notas.devuelveNota(usuario.getNombre());
