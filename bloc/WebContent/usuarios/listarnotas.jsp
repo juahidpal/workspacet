@@ -2,7 +2,7 @@
 <%@page import="fast.bloc.BorrarNotaServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.util.List, fast.bloc.Nota"%>
-	
+
 
 
 
@@ -29,23 +29,20 @@
 	<h1>Lista de notas</h1>
 	<div id="lista-div">
 		<table id="lista-tabla">
-		<%! private String valorIdTituloString;
-			private int valorIdParaListaCat;
-		%>
+			<%!private String valorIdTituloString;
+	private int valorIdParaListaCat;%>
 			<%
 				for (Nota nota : lista) {
 					//Generamos tabla
-					
-					valorIdTituloString = Integer.toString(nota.getId());
 
+					valorIdTituloString = Integer.toString(nota.getId());
 			%>
 			<tr id='fila-<%=nota.getId()%>'>
 				<td class="infonota">
-					<p>	<strong><%=nota.getTitulo()%></strong>	</p>
-					
-					
-					
-					<%-- 
+				<input type="checkbox" id="myCheck" name="checkbox"	class="check">
+					<p>
+						<strong><%=nota.getTitulo()%></strong>
+					</p> <%-- 
 					OTRA SOLUCION
 					<%if(listaCat.contains(valorIdTituloString)){
 						
@@ -58,12 +55,8 @@
 							<p>Categoria: <%=listaCat.get(indexNum+1) %></p>					
 						<%} %>
 					
-					--%>					
-					<div class='detalle' id='detalle-<%=nota.getId()%>'>
-					
-					
-					</div>
-				</td>
+					--%>
+					<div class='detalle' id='detalle-<%=nota.getId()%>'></div></td>
 			</tr>
 			<%
 				}
@@ -72,6 +65,16 @@
 	</div>
 
 </div>
+
+
+<div class="botonesInferiores">
+	<button type="button" id="desmarcartodas" name="btn1" class="boton">des/marcartodas</button>
+	<button type="button" id="borrarseleccionadas"name="btn2" class="boton">borrar seleccionadas</button>
+
+</div>
+
+
+
 
 <%@include file="../pie.jsp"%>
 </body>

@@ -14,6 +14,10 @@ a img {
   border: none;
 }
 
+.botonesInferiores{
+	
+text-align: center;}
+
 .boton {
 	background-color: #a55;
 	color: white;
@@ -209,5 +213,19 @@ a img {
 }
 #cat{
 }
+.check input{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	
+}
+
 
 
