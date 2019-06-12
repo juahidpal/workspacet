@@ -223,8 +223,8 @@ function borrarseleccionadas() {
 
 	}else{
 		for ( var j in cadenaMarcados) {
-			subcadena = parseInt(cadenaMarcados[j].substring(5));
-			borrar(event,subcadena);
+			subcadena = cadenaMarcados[j].substring(5);
+			borrar(event,cadenaMarcados[j]);
 		}
 	}
 	

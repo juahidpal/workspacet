@@ -273,3 +273,18 @@ Jun 07, 2019 16:30:04.21 (/usr/lib/firefox/firefox:8798): dconf-WARNING **: 16:3
 Jun 07, 2019 16:57:09.08 [Parent 6587, Gecko_IOThread] WARNING: pipe error (97): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 Jun 07, 2019 16:57:09.08 [Parent 6587, Gecko_IOThread] WARNING: pipe error (62): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 Jun 07, 2019 16:57:09.10 [Parent 6587, Gecko_IOThread] WARNING: pipe error (117): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+Jun 12, 2019 16:12:52.21 NEW SESSION
+Jun 12, 2019 16:12:52.21 
+Jun 12, 2019 16:12:52.21 (/usr/lib/firefox/firefox:4282): dconf-WARNING **: 16:12:52.210: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 12, 2019 16:28:30.69 WebGL(0x7f73770be800)::ForceLoseContext
+Jun 12, 2019 16:28:30.70 WebGL(0x7f73770cd000)::ForceLoseContext
+Jun 12, 2019 16:29:09.72 [Parent 4198, Gecko_IOThread] WARNING: pipe error (129): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 12, 2019 16:29:09.74 [Parent 4198, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 12, 2019 16:29:24.15 WebGL(0x7f53c7a9d000)::ForceLoseContext
+Jun 12, 2019 16:29:24.17 WebGL(0x7f53c7dee000)::ForceLoseContext
+Jun 12, 2019 16:30:03.06 
+Jun 12, 2019 16:30:03.06 (/usr/lib/firefox/firefox:8442): dconf-WARNING **: 16:30:03.064: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 12, 2019 16:31:30.75 WebGL(0x7f53aed99800)::ForceLoseContext
+Jun 12, 2019 16:31:30.76 WebGL(0x7f53aed9a000)::ForceLoseContext
+Jun 12, 2019 17:30:58.60 [Parent 4198, Gecko_IOThread] WARNING: pipe error (218): Connection reset by peer: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357

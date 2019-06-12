@@ -2,7 +2,7 @@
 
 //Indica el id de la ultima nota cuyo detalle se ha mostrado
 var ultid=-1;//variable global
-var flagCheck = true;
+var flagCheck = false;
 
 //Esta funcion sirve para mostrar un mensaje mientras se obtienen los detalles
 function mostrarEsperando(elemento) {
@@ -180,56 +180,28 @@ function desmarcartodas() {
 	
 	var miCheck =  document.querySelectorAll(".check"); 
 	
-	if (flagCheck){
+	if (!flagCheck){
 		
-		for ( var i = 0; i< miCheck.length;i++) {
+		for ( var i in miCheck) {
 			miCheck[i].checked = true;
+			flagCheck = true;
 		}
-		flagCheck = false;
-
-	}else if (!flagCheck) {
-		for (var j = 0; j < miCheck.length;j++) {
-			miCheck[j].checked = false;
+	}else if (flagCheck) {
+		for ( var i in miCheck) {
+			miCheck[i].checked = true;
+			flagCheck = false;
 		}
-		flagCheck = true;
-
 	}
+
+		
+		
+		
+	
 	
 }
 function borrarseleccionadas() {
-	//alert("estas en borrarSeleccionadas");
+	alert("estas en borrarSeleccionadas");
 	
-	var miCheck =  document.querySelectorAll(".check"); 
-	var contador  = 0;
-	var flagMarcados = false;
-	var cadenaMarcados = [];
-	var subcadena;
-	
-	for(var i=0;i<miCheck.length;i++){
-		
-		if(miCheck[i].checked == true){
-			
-			cadenaMarcados[contador] = miCheck[i].parentElement.parentElement.id;
-			
-			contador++;
-			flagMarcados = true;
-			//guardamos el id del checkox que estaba marcado
-			
-
-		}
-	}
-	if (flagMarcados == false){
-		alert("No ha seleccionado ninguna nota");
-
-	}else{
-		for ( var j in cadenaMarcados) {
-			subcadena = parseInt(cadenaMarcados[j].substring(5));
-			borrar(event,subcadena);
-		}
-	}
-	
-	
-
 }
 
 window.addEventListener("load", function() {

@@ -202,32 +202,18 @@ function borrarseleccionadas() {
 	var miCheck =  document.querySelectorAll(".check"); 
 	var contador  = 0;
 	var flagMarcados = false;
-	var cadenaMarcados = [];
-	var subcadena;
-	
 	for(var i=0;i<miCheck.length;i++){
 		
 		if(miCheck[i].checked == true){
-			
-			cadenaMarcados[contador] = miCheck[i].parentElement.parentElement.id;
-			
 			contador++;
 			flagMarcados = true;
-			//guardamos el id del checkox que estaba marcado
-			
 
 		}
 	}
 	if (flagMarcados == false){
 		alert("No ha seleccionado ninguna nota");
 
-	}else{
-		for ( var j in cadenaMarcados) {
-			subcadena = parseInt(cadenaMarcados[j].substring(5));
-			borrar(event,subcadena);
-		}
 	}
-	
 	
 
 }
