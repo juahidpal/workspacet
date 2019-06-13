@@ -307,3 +307,34 @@ Jun 13, 2019 12:16:12.30 [Parent 3792, Gecko_IOThread] WARNING: pipe error (119)
 Jun 13, 2019 12:16:12.35 
 Jun 13, 2019 12:16:12.35 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 Jun 13, 2019 12:16:12.35 
+
+jun. 13, 2019 14:38:53.17 NEW SESSION
+jun. 13, 2019 14:38:53.17 
+jun. 13, 2019 14:38:53.17 (/usr/lib/firefox/firefox:17166): dconf-WARNING **: 14:38:53.171: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 13, 2019 18:57:34.05 IPDL protocol error: Handler returned error code!
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.05 ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.05 IPDL protocol error: Handler returned error code!
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.05 ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.05 IPDL protocol error: Handler returned error code!
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.05 ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+jun. 13, 2019 18:57:34.05 
+jun. 13, 2019 18:57:34.14 [Parent 17093, Gecko_IOThread] WARNING: pipe error (106): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 13, 2019 18:57:34.15 [Parent 17093, Gecko_IOThread] WARNING: pipe error (55): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+jun. 14, 2019 24:32:29.31 NEW SESSION
+jun. 14, 2019 24:32:29.31 
+jun. 14, 2019 24:32:29.31 (/usr/lib/firefox/firefox:3599): dconf-WARNING **: 00:32:29.316: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 24:54:10.14 
+jun. 14, 2019 24:54:10.14 ###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+jun. 14, 2019 24:54:10.14 
+jun. 14, 2019 24:54:10.18 [Parent 3513, Gecko_IOThread] WARNING: pipe error (184): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 24:54:10.19 [Parent 3513, Gecko_IOThread] WARNING: pipe error (123): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 24:54:10.20 [Parent 3513, Gecko_IOThread] WARNING: pipe error (94): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 24:54:10.20 [Parent 3513, Gecko_IOThread] WARNING: pipe error (71): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 24:54:10.21 [Parent 3513, Gecko_IOThread] WARNING: pipe error (132): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 24:54:10.21 [Parent 3513, Gecko_IOThread] WARNING: pipe error (218): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357

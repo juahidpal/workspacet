@@ -38,7 +38,7 @@ function mostrarDetalle(elemento, objetoDetalle) {
 				+ "' alt='Sin imagen'  height="
 				+ 100
 				+ " /><br />"
-				+ "<button class='boton' onclick='borrar(event, ultid);'>Borrar</button></p></div>";
+				+ "<button class='boton' onclick='borrar(event, ultid);'>Borrar</button><button class='boton' onclick='editar();'>Editar </button></p></div>";
 	}
 }
 
@@ -119,29 +119,29 @@ function borrar(event, id) {
 
 function borrarCheck(id) {
 
-	if (ultid == id) { // en este caso, borramos
+	// if (ultid == id) { // en este caso, borramos
 
-		// Peticion AJAX
-		var peticion = "borranota";
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", peticion, true);
-		xmlhttp.setRequestHeader("Content-type",
-				"application/x-www-form-urlencoded");
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4) {
-				if (xmlhttp.status == 200) {
-					// Respuesta recibida completamente (4) y sin
-					// errores del servidor (codigo HTTP 200)
-					// Analizamos
-					var resultadoBorrar = JSON.parse(xmlhttp.responseText);
-					procesarResultadoBorrar(resultadoBorrar);
-				} else {
-					divDetalle.innerHTML = cabDetalle + "<p>Error</p>";
-				}
+	// Peticion AJAX
+	var peticion = "borranota";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("POST", peticion, true);
+	xmlhttp.setRequestHeader("Content-type",
+			"application/x-www-form-urlencoded");
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			if (xmlhttp.status == 200) {
+				// Respuesta recibida completamente (4) y sin
+				// errores del servidor (codigo HTTP 200)
+				// Analizamos
+				var resultadoBorrar = JSON.parse(xmlhttp.responseText);
+				procesarResultadoBorrar(resultadoBorrar);
+			} else {
+				divDetalle.innerHTML = cabDetalle + "<p>Error</p>";
 			}
-		};
-		xmlhttp.send("id=" + ultid); // enviamos
-	}
+		}
+	};
+	xmlhttp.send("id=" + id); // enviamos
+	// }
 }
 
 // Procesa resultados de borrar obtenidos mediante AJAX.
@@ -219,21 +219,25 @@ function desmarcartodas() {
 
 	var miCheck = document.querySelectorAll(".check");
 
-	if (flagCheck) {
+	if (miCheck.length != 0) {
 
-		for (var i = 0; i < miCheck.length; i++) {
-			miCheck[i].checked = true;
+		if (flagCheck) {
+
+			for (var i = 0; i < miCheck.length; i++) {
+				miCheck[i].checked = true;
+			}
+			flagCheck = false;
+
+		} else if (!flagCheck) {
+			for (var j = 0; j < miCheck.length; j++) {
+				miCheck[j].checked = false;
+			}
+			flagCheck = true;
+
 		}
-		flagCheck = false;
-
-	} else if (!flagCheck) {
-		for (var j = 0; j < miCheck.length; j++) {
-			miCheck[j].checked = false;
-		}
-		flagCheck = true;
-
+	} else {
+		alert("no hay elementos para seleccionar");
 	}
-
 }
 function borrarseleccionadas() {
 	// alert("estas en borrarSeleccionadas");
@@ -245,34 +249,48 @@ function borrarseleccionadas() {
 	var subcadena;
 	var confirmar;
 
-	for (var i = 0; i < miCheck.length; i++) {
+	// preguntamos si hay alguna nota para seleccionar
+	if (miCheck.length != 0) {
 
-		if (miCheck[i].checked == true) {
+		for (var i = 0; i < miCheck.length; i++) {
 
-			cadenaMarcados[contador] = miCheck[i].parentElement.parentElement.id;
+			if (miCheck[i].checked == true) {
 
-			contador++;
-			flagMarcados = true;
-			// guardamos el id del checkox que estaba marcado
+				cadenaMarcados[contador] = miCheck[i].parentElement.parentElement.id;
 
-		}
-	}
-	if (flagMarcados == false) {
-		alert("No ha seleccionado ninguna nota");
+				contador++;
+				flagMarcados = true;
+				// guardamos el id del checkox que estaba marcado
 
-	} else {
-		confirmar = confirm("Desea borrar todas las notas seleccionadas?")
-		if (confirmar == true) {
-
-			for (var j = 0; j < cadenaMarcados.length; j++) {
-				subcadena = parseInt(cadenaMarcados[j].substring(5));
-
-				borrarCheck(subcadena);
 			}
 		}
+		if (flagMarcados == false) {
+			alert("No ha seleccionado ninguna nota");
 
+		} else {
+			confirmar = confirm("Desea borrar todas las notas seleccionadas?")
+			if (confirmar == true) {
+
+				for (var j = 0; j < cadenaMarcados.length; j++) {
+					subcadena = parseInt(cadenaMarcados[j].substring(5));
+
+					borrarCheck(subcadena);
+				}
+			}
+
+		}
+
+	} else {
+		alert("no hay elementos para seleccionar");
 	}
 
+}
+
+function editar(){
+	
+	//alert("estas en editar");
+	location.href="editarnota.jsp";
+	
 }
 
 window.addEventListener("load", function() {
