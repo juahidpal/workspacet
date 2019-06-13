@@ -119,29 +119,26 @@ function borrar(event, id) {
 
 function borrarCheck(id) {
 
-	if (ultid == id) { // en este caso, borramos
-
-		// Peticion AJAX
-		var peticion = "borranota";
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", peticion, true);
-		xmlhttp.setRequestHeader("Content-type",
-				"application/x-www-form-urlencoded");
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4) {
-				if (xmlhttp.status == 200) {
-					// Respuesta recibida completamente (4) y sin
-					// errores del servidor (codigo HTTP 200)
-					// Analizamos
-					var resultadoBorrar = JSON.parse(xmlhttp.responseText);
-					procesarResultadoBorrar(resultadoBorrar);
-				} else {
-					divDetalle.innerHTML = cabDetalle + "<p>Error</p>";
-				}
+	// Peticion AJAX
+	var peticion = "borranota";
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("POST", peticion, true);
+	xmlhttp.setRequestHeader("Content-type",
+			"application/x-www-form-urlencoded");
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			if (xmlhttp.status == 200) {
+				// Respuesta recibida completamente (4) y sin
+				// errores del servidor (codigo HTTP 200)
+				// Analizamos
+				var resultadoBorrar = JSON.parse(xmlhttp.responseText);
+				procesarResultadoBorrar(resultadoBorrar);
+			} else {
+				divDetalle.innerHTML = cabDetalle + "<p>Error</p>";
 			}
-		};
-		xmlhttp.send("id=" + ultid); // enviamos
-	}
+		}
+	};
+	xmlhttp.send("id=" + ultid); // enviamos
 }
 
 // Procesa resultados de borrar obtenidos mediante AJAX.

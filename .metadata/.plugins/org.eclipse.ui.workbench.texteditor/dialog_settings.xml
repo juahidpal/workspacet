@@ -9,12 +9,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Borrar" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="podido"/>
+			<item value="no se ha"/>
 			<item value="borrar"/>
 			<item value="stopPropagation"/>
 			<item value="Inicialización"/>
@@ -28,8 +30,6 @@
 			<item value="Error en"/>
 			<item value="mostrar"/>
 			<item value="info-num"/>
-			<item value="titulo-div"/>
-			<item value="validacion"/>
 		</list>
 		<list key="replacehistory">
 		</list>
