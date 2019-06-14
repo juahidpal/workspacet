@@ -7,6 +7,14 @@
 <jsp:useBean id="nota" class="fast.bloc.Nota" />
 <jsp:setProperty property="*" name="nota" />
 
+<%
+	String id_nota = request.getParameter("id_nota");
+	int id = Integer.parseInt(id_nota);
+	Nota notaRecibida = notas.obtener(id);
+	System.out.println("DEBUG:::::::::::::"+notaRecibida);
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +27,15 @@
 <jsp:include page="cabecera.jsp" />
 
 <%
+
+	//vamos a consultar la nota con el id recibido
+	
+	
+
+
 	// Código HTML + JSP  
 	//TODO esto se podría hacer con AJAX y se eliminaría el código
-	if (nota.getTitulo() != null) {
+	if (notaRecibida.getTitulo() != null) {
 		//Creamos notas
 
 		String mensajeError = "";
@@ -67,7 +81,7 @@
 				<label for="titulo">
 				<strong>T&iacute;tulo de la	nota</strong>
 				</label> 
-				<input id="titulo" type="text" value="" name="titulo"
+				<input id="titulo" type="text" value="<%=notaRecibida.getTitulo() %>" name="titulo"
 					maxlength="100" required="required">
 				</input>
 			</div>
@@ -79,11 +93,11 @@
 
 			<div class="imagen-div">
 				<label for="urlimagen"><strong>URL de la imagen</strong></label> <input
-					id="urlimagen" type="text" value="" name="urlimagen"></input>
+					id="urlimagen" type="text" value="<%=notaRecibida.getUrlimagen() %>" name="urlimagen"></input>
 			</div>
 			<div class="nota-div">
 				<label for="nota"><strong>Nota</strong></label>
-				<textarea id="nota" name="nota" cols="100%" rows="100%"></textarea>
+				<textarea id="nota" name="nota" cols="100%" rows="100%" ><%=notaRecibida.getNota()	 %></textarea>
 			</div>
 			
 				<input class="boton" id="enviarnota" type="submit" value="Guardar"

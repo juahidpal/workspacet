@@ -338,3 +338,37 @@ jun. 14, 2019 24:54:10.20 [Parent 3513, Gecko_IOThread] WARNING: pipe error (94)
 jun. 14, 2019 24:54:10.20 [Parent 3513, Gecko_IOThread] WARNING: pipe error (71): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 jun. 14, 2019 24:54:10.21 [Parent 3513, Gecko_IOThread] WARNING: pipe error (132): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 jun. 14, 2019 24:54:10.21 [Parent 3513, Gecko_IOThread] WARNING: pipe error (218): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+Jun 14, 2019 09:14:06.99 NEW SESSION
+Jun 14, 2019 09:14:06.99 
+Jun 14, 2019 09:14:06.99 (/usr/lib/firefox/firefox:4655): dconf-WARNING **: 09:14:06.996: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 09:16:12.42 
+Jun 14, 2019 09:16:12.42 (/usr/lib/firefox/firefox:4851): dconf-WARNING **: 09:16:12.427: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 09:22:23.18 
+Jun 14, 2019 09:22:23.18 (/usr/lib/firefox/firefox:5402): dconf-WARNING **: 09:22:23.182: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 10:16:08.11 [Parent 4588, Gecko_IOThread] WARNING: pipe error (133): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 14, 2019 10:16:09.04 
+Jun 14, 2019 10:16:09.04 (/usr/lib/firefox/firefox:5726): dconf-WARNING **: 10:16:09.045: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 10:37:10.27 [Parent 4588, Gecko_IOThread] WARNING: pipe error (164): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 14, 2019 10:37:16.93 
+Jun 14, 2019 10:37:16.93 (/usr/lib/firefox/firefox:7347): dconf-WARNING **: 10:37:16.934: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 10:51:11.08 
+Jun 14, 2019 10:51:11.08 (/usr/lib/firefox/firefox:8366): dconf-WARNING **: 10:51:11.087: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 10:51:17.19 [Parent 4588, Gecko_IOThread] WARNING: pipe error (110): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 14, 2019 10:55:43.13 
+Jun 14, 2019 10:55:43.13 (/usr/lib/firefox/firefox:8653): dconf-WARNING **: 10:55:43.135: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 11:07:29.48 
+Jun 14, 2019 11:07:29.48 (/usr/lib/firefox/firefox:9708): dconf-WARNING **: 11:07:29.487: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+
+Jun 14, 2019 11:10:38.96 NEW SESSION
+Jun 14, 2019 11:10:38.96 
+Jun 14, 2019 11:10:38.96 (/usr/lib/firefox/firefox:10184): dconf-WARNING **: 11:10:38.964: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+
+Jun 14, 2019 11:38:39.73 NEW SESSION
+Jun 14, 2019 11:38:39.73 
+Jun 14, 2019 11:38:39.73 (/usr/lib/firefox/firefox:3133): dconf-WARNING **: 11:38:39.730: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 11:41:42.48 
+Jun 14, 2019 11:41:42.48 (/usr/lib/firefox/firefox:3334): dconf-WARNING **: 11:41:42.486: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (167): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (60): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357

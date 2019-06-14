@@ -38,7 +38,7 @@ function mostrarDetalle(elemento, objetoDetalle) {
 				+ "' alt='Sin imagen'  height="
 				+ 100
 				+ " /><br />"
-				+ "<button class='boton' onclick='borrar(event, ultid);'>Borrar</button><button class='boton' onclick='editar();'>Editar </button></p></div>";
+				+ "<button class='boton' onclick='borrar(event, ultid);'>Borrar</button><button class='boton' onclick='editar(ultid);'>Editar </button></p></div>";
 	}
 }
 
@@ -286,10 +286,10 @@ function borrarseleccionadas() {
 
 }
 
-function editar(){
+function editar(id){
 	
 	//alert("estas en editar");
-	location.href="editarnota.jsp";
+	location.href='editarnota.jsp?id_nota='+id ;
 	
 }
 

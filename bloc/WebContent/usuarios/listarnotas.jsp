@@ -30,7 +30,7 @@
 	<div id="lista-div">
 		<table id="lista-tabla">
 			<%!private String valorIdTituloString;
-	private int valorIdParaListaCat;%>
+				private int valorIdParaListaCat;%>
 			<%
 				for (Nota nota : lista) {
 					//Generamos tabla
