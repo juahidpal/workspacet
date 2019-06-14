@@ -372,3 +372,27 @@ Jun 14, 2019 11:41:42.48 (/usr/lib/firefox/firefox:3334): dconf-WARNING **: 11:4
 Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (167): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
 Jun 14, 2019 12:06:50.68 [Parent 3060, Gecko_IOThread] WARNING: pipe error (60): Connection reset by peer: file /build/firefox-64sAvM/firefox-67.0.2+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+
+jun. 14, 2019 13:47:09.94 NEW SESSION
+jun. 14, 2019 13:47:09.94 
+jun. 14, 2019 13:47:09.94 (/usr/lib/firefox/firefox:4639): dconf-WARNING **: 13:47:09.939: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 15:49:02.09 
+jun. 14, 2019 15:49:02.09 ###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+jun. 14, 2019 15:49:02.09 
+jun. 14, 2019 15:49:03.11 
+jun. 14, 2019 15:49:03.11 (/usr/lib/firefox/firefox:5830): dconf-WARNING **: 15:49:03.109: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 15:59:25.54 
+jun. 14, 2019 15:59:25.54 (/usr/lib/firefox/firefox:6542): dconf-WARNING **: 15:59:25.548: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 16:08:08.19 
+jun. 14, 2019 16:08:08.19 (/usr/lib/firefox/firefox:7411): dconf-WARNING **: 16:08:08.191: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 16:13:15.51 
+jun. 14, 2019 16:13:15.51 (/usr/lib/firefox/firefox:7495): dconf-WARNING **: 16:13:15.512: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado
+jun. 14, 2019 18:41:37.93 [Parent 4554, Gecko_IOThread] WARNING: pipe error (164): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 18:41:37.93 [Parent 4554, Gecko_IOThread] WARNING: pipe error (117): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 18:41:37.96 IPDL protocol error: Handler returned error code!
+jun. 14, 2019 18:41:37.96 
+jun. 14, 2019 18:41:37.96 ###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+jun. 14, 2019 18:41:37.96 
+jun. 14, 2019 18:41:38.02 [Parent 4554, Gecko_IOThread] WARNING: pipe error (162): Conexión reinicializada por la máquina remota: file /build/firefox-QVYkTF/firefox-67.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+jun. 14, 2019 18:48:03.57 
+jun. 14, 2019 18:48:03.57 (/usr/lib/firefox/firefox:11312): dconf-WARNING **: 18:48:03.574: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permiso denegado

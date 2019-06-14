@@ -232,6 +232,37 @@ public class NotasDAO {
 		}
 		return resultado;
 	}
+	public boolean actualizar(Nota nota,int id, String usuario) throws DAOException {
+		Connection conn;
+		boolean resultado = false;
+
+		try {
+			conn = ds.getConnection();
+			String sql = "UPDATE notas SET titulo=?, nota=?, urlimagen=? WHERE nombre_usuario=? AND id=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, nota.getNombreUsuario());
+			st.setString(2, nota.getTitulo());
+			st.setString(3, nota.getNota());
+			st.setString(4, nota.getUrlimagen());
+			st.setString(5, nota.getCategoria());
+			st.setString(6, nota.getColor());
+			System.out.println("Se va a actualizar la nota del usuario=" + nota.getNombreUsuario());
+			int contador = st.executeUpdate();
+			if (contador == 1) {
+				System.out.println("Se ha actualizado la nota del usuario=" + nota.getNombreUsuario());
+				resultado = true;
+			}
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+			throw (new DAOException("Error en actualizar(nota) de NotasDAO"));
+		}
+		return resultado;
+	}
+	
+	
 
 	// tarea devuelve funciones de categoria
 	/**
