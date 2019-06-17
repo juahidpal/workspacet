@@ -9,19 +9,19 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="#formcrear" key="selection"/>
+		<item value="borrar" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="borrar"/>
 			<item value="#formcrear"/>
 			<item value="#crear"/>
 			<item value="crear"/>
 			<item value=".crear"/>
 			<item value="podido"/>
 			<item value="no se ha"/>
-			<item value="borrar"/>
 			<item value="stopPropagation"/>
 			<item value="Inicialización"/>
 			<item value="obteniendo"/>
@@ -38,7 +38,7 @@
 		<item value="353" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="430" key="DIALOG_HEIGHT"/>
-		<item value="1573" key="DIALOG_X_ORIGIN"/>
+		<item value="1567" key="DIALOG_X_ORIGIN"/>
 		<item value="117" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

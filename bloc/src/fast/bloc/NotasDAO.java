@@ -28,10 +28,7 @@ public class NotasDAO {
 		return ds;
 	}
 
-	public boolean borrar(int id) throws DAOException {
-		// TODO pruebas
-		return true;
-	}
+	
 
 	/**
 	 * Borra una nota que coincida con (id,usuario)
@@ -52,6 +49,34 @@ public class NotasDAO {
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, id);
 			st.setString(2, usuario);
+			int contador = st.executeUpdate();
+			if (contador == 1) {
+				System.out.println("Se ha borrado la nota con id=" + id);
+				resultado = true;
+			}
+			System.out.println("borrados=" + contador);
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+			throw (new DAOException("Error en borrar(id,usuario) de NotasDAO"));
+		}
+		return resultado;
+	}
+	
+	
+	public boolean borrar(int id) throws DAOException {
+		Connection conn;
+		boolean resultado = false;
+
+		try {
+			System.out.println("Se va a borrar la nota con id=" + id );
+			conn = ds.getConnection();
+			String sql = "DELETE FROM notas WHERE id=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setInt(1, id);
+			//st.setString(2, usuario);
 			int contador = st.executeUpdate();
 			if (contador == 1) {
 				System.out.println("Se ha borrado la nota con id=" + id);
@@ -232,6 +257,36 @@ public class NotasDAO {
 		}
 		return resultado;
 	}
+	
+	public boolean actualizar(Nota nota, String usuario, int id) throws DAOException {
+		Connection conn;
+		boolean resultado = false;
+
+		try {
+			conn = ds.getConnection();
+			String sql = "UPDATE notas SET titulo=?, urlimagen=?, nota=? WHERE nombre_usuario=? AND id=?";
+			
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, nota.getTitulo());
+			st.setString(2, nota.getUrlimagen());
+			st.setString(3, nota.getNota());
+			st.setString(4, usuario);
+			st.setInt(5, id);
+			System.out.println("Se va a actualizar la nota del usuario=" + nota.getNombreUsuario());
+			int contador = st.executeUpdate();
+			if (contador == 1) {
+				System.out.println("Se ha actualizado la nota del usuario=" + nota.getNombreUsuario());
+				resultado = true;
+			}
+			st.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error de acceso a la base de datos. NotasDAO.");
+			throw (new DAOException("Error en actualizar(nota) de NotasDAO"));
+		}
+		return resultado;
+	}
 
 	// tarea devuelve funciones de categoria
 	/**
@@ -383,6 +438,9 @@ public class NotasDAO {
 		return lista;
 		
 	}
+	
+	
+	
 	
 	
 

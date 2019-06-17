@@ -30,7 +30,7 @@
 	<div id="lista-div">
 		<table id="lista-tabla">
 			<%!private String valorIdTituloString;
-				private int valorIdParaListaCat;%>
+	private int valorIdParaListaCat;%>
 			<%
 				for (Nota nota : lista) {
 					//Generamos tabla
@@ -38,8 +38,11 @@
 					valorIdTituloString = Integer.toString(nota.getId());
 			%>
 			<tr id='fila-<%=nota.getId()%>'>
+
+				<td>
+					<input type="checkbox" id="myCheck" name="checkbox"	class="check">
+				</td>
 				<td class="infonota">
-				<input type="checkbox" id="myCheck" name="checkbox"	class="check">
 					<p>
 						<strong><%=nota.getTitulo()%></strong>
 					</p> <%-- 
@@ -56,7 +59,8 @@
 						<%} %>
 					
 					--%>
-					<div class='detalle' id='detalle-<%=nota.getId()%>'></div></td>
+					<div class='detalle' id='detalle-<%=nota.getId()%>'></div>
+				</td>
 			</tr>
 			<%
 				}
@@ -69,7 +73,8 @@
 
 <div class="botonesInferiores">
 	<button type="button" id="desmarcartodas" name="btn1" class="boton">des/marcartodas</button>
-	<button type="button" id="borrarseleccionadas"name="btn2" class="boton">borrar seleccionadas</button>
+	<button type="button" id="borrarseleccionadas" name="btn2"
+		class="boton">borrar seleccionadas</button>
 
 </div>
 

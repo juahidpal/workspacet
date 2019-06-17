@@ -48,7 +48,14 @@
 							
 							%>
 			<tr id='fila-<%=nota.getId()%>'>
+				<td>
+					<input type="checkbox" id="myCheck" name="checkbox" class="check">
+				</td> 
+				
 				<td class="infonota">
+				
+				
+				
 					<p>	<strong><%=nota.getTitulo()%></strong>	:<strong><%=nota.getNombreUsuario() %></strong></p>
 					
 					<!-- <%-- 		<p>ID <%=nota.getId() %>: NOTA: <%=notas.obtener(nota.getId()) %></p>
@@ -80,6 +87,13 @@
 			%>
 		</table>
 	</div>
+
+</div>
+
+<div class="botonesInferiores">
+	<button type="button" id="desmarcartodas" name="btn1" class="boton">des/marcartodas</button>
+	<button type="button" id="borrarseleccionadas"name="btn2" class="boton">borrar seleccionadas</button>
+	<button type="button" id="ordenar" name="btn3" class="boton">ordenar</button>
 
 </div>
 

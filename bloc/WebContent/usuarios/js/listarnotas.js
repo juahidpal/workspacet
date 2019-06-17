@@ -286,6 +286,11 @@ function borrarseleccionadas() {
 
 }
 
+function ordenar(){
+	location.href='../admins/listarnotasTodas.jsp?nombreOrdenar='+true ;
+
+}
+
 function editar(id){
 	
 	//alert("estas en editar");
@@ -303,5 +308,6 @@ window.addEventListener("load", function() {
 			desmarcartodas);
 	document.getElementById("borrarseleccionadas").addEventListener("click",
 			borrarseleccionadas);
+	document.getElementById("ordenar").addEventListener("click",ordenar);
 
 });

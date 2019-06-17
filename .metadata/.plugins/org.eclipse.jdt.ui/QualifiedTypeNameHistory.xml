@@ -21,7 +21,7 @@
     <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.ListAdapter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="fast.bloc.Usuario"/>
     <fullyQualifiedTypeName name="fast.bloc.NotasDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="fast.bloc.Usuario"/>
 </qualifiedTypeNameHistroy>

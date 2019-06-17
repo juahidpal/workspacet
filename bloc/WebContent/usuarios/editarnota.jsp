@@ -9,10 +9,10 @@
 
 <%
 	String id_nota = request.getParameter("id_nota");
-	int id = Integer.parseInt(id_nota);
-	Nota notaRecibida = notas.obtener(id);
-	System.out.println("DEBUG:::::::::::::"+notaRecibida);
-
+	int iden = Integer.parseInt(id_nota);
+	Nota notaRecibida = notas.obtener(iden);
+	System.out.println("DEBUG:::::::::::::" + notaRecibida);
+	String mensajeError = "";
 %>
 
 <!DOCTYPE html>
@@ -27,34 +27,32 @@
 <jsp:include page="cabecera.jsp" />
 
 <%
-
 	//vamos a consultar la nota con el id recibido
+
+	if (request.getParameterMap().containsKey("titulo")) {
 	
-	
+		// Código HTML + JSP  
+		//TODO esto se podría hacer con AJAX y se eliminaría el código
+		if (nota.getTitulo() != null) {
+			//Creamos notas
 
+			//String mensajeError = "";
 
-	// Código HTML + JSP  
-	//TODO esto se podría hacer con AJAX y se eliminaría el código
-	if (notaRecibida.getTitulo() != null) {
-		//Creamos notas
+			try {
+				// el nombre de usuario se obtiene del atributo de sesión usuario
+				nota.setNombreUsuario(usuario.getNombre());
+				if (!notas.actualizar(nota,usuario.getNombre(),iden)){ //inserta todo el objeto nota, osea el bean nota
+					mensajeError = "No se ha podido insertar la nota";
+				}
 
-		String mensajeError = "";
-
-		try {
-			// el nombre de usuario se obtiene del atributo de sesión usuario
-			nota.setNombreUsuario(usuario.getNombre());
-			if (!notas.insertar(nota)) {	//inserta todo el objeto nota, osea el bean nota
-				mensajeError = "No se ha podido insertar la nota";
+			} catch (DAOException e) {
+				mensajeError = e.getMessage();
 			}
 
-		} catch (DAOException e) {
-			mensajeError = e.getMessage();
-		}
-
-		//Muestra error o exito
-		if (!mensajeError.isEmpty()) {
+			//Muestra error o exito
+			if (!mensajeError.isEmpty()) {
 %>
-<div id="error" >
+<div id="error">
 	<p>
 		ERROR:
 		<%=mensajeError%>
@@ -68,6 +66,20 @@
 </div>
 <%
 	}
+		}
+	}else if(id_nota != null) {
+		try {
+			nota = notas.obtener(iden, usuario.getNombre());
+			if (nota == null) {
+				mensajeError = "La nota no existe";
+			}
+		} catch (DAOException e) {
+			mensajeError = e.getMessage();
+
+		} catch (NumberFormatException e) {
+			mensajeError = "Parametro incorrecto";
+		}
+
 	}
 	//mostramos formulario
 %>
@@ -76,34 +88,29 @@
 <div id="editar">
 	<h1>Editar nota</h1>
 	<div id="formeditar">
-		<form method="post" action="" onsubmit="validacion()">
+		<form method="post" action="" >
 			<div class="titulo-div">
-				<label for="titulo">
-				<strong>T&iacute;tulo de la	nota</strong>
+				<label for="titulo"> <strong>T&iacute;tulo de la
+						nota</strong>
 				</label> 
-				<input id="titulo" type="text" value="<%=notaRecibida.getTitulo() %>" name="titulo"
-					maxlength="100" required="required">
-				</input>
+				<input id="titulo" type="text"
+					value="<%=nota.getTitulo()%>" name="titulo"
+					maxlength="100" required="required"> </input>
 			</div>
-
-
-
-
-
 
 			<div class="imagen-div">
 				<label for="urlimagen"><strong>URL de la imagen</strong></label> <input
-					id="urlimagen" type="text" value="<%=notaRecibida.getUrlimagen() %>" name="urlimagen"></input>
+					id="urlimagen" type="text"
+					value="<%=nota.getUrlimagen()%>" name="urlimagen"></input>
 			</div>
 			<div class="nota-div">
 				<label for="nota"><strong>Nota</strong></label>
-				<textarea id="nota" name="nota" cols="100%" rows="100%" ><%=notaRecibida.getNota()	 %></textarea>
+				<textarea id="nota" name="nota" cols="100%" rows="100%"><%=nota.getNota()%></textarea>
 			</div>
-			
-				<input class="boton" id="enviarnota" type="submit" value="Guardar"
-				name="enviarnota"></input> 
-				
-				<input class="boton" id="limpiar"
+
+			<input class="boton" id="enviarnota" type="submit" value="Guardar"
+				name="enviarnota"></input>
+				 <input class="boton" id="limpiar"
 				type="reset" value="Recargar datos guardados" name="limpiar"></input>
 		</form>
 
