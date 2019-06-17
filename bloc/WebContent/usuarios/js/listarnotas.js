@@ -212,7 +212,32 @@ function agregaColor() {
 }
 function validacion() {
 	// alert("has dado click al CREAR");
+	
+	
 }
+
+function verificarCambio(){
+	var cambio = false;
+	
+	//alert("estas en verificar cambio");
+	var tituloNota = document.getElementById("titulo").value;
+	var urlImagenNota = document.getElementById("urlimagen").value;
+	var textNota = document.getElementById("nota").value;
+
+	
+	
+	//return cambio;
+}
+function recarga(){
+	var cambio = false;
+	
+	alert("estas en recarga");
+	
+	
+	//return cambio;
+}
+
+
 
 function desmarcartodas() {
 	// alert("estas en desmarca");
@@ -303,6 +328,7 @@ window.addEventListener("load", function() {
 	for (var i = 0; i < infos.length; i++) {
 		infos[i].onclick = mostrar;
 	}
+<<<<<<< HEAD
 
 	document.getElementById("desmarcartodas").addEventListener("click",
 			desmarcartodas);
@@ -310,4 +336,21 @@ window.addEventListener("load", function() {
 			borrarseleccionadas);
 	document.getElementById("ordenar").addEventListener("click",ordenar);
 
+=======
+	try {
+		document.getElementById("desmarcartodas").addEventListener("click",
+				desmarcartodas);
+		document.getElementById("borrarseleccionadas").addEventListener("click",
+				borrarseleccionadas);
+		document.getElementById("idGuardar").addEventListener("click",
+				verificarCambio);
+		document.getElementById("idRecargar").addEventListener("click",
+				recarga);
+
+	} catch (e) {
+		// TODO: handle exception
+		console.log("no hay botones");
+	}
+	
+>>>>>>> 1cbc2627b5ed9211998584566bae6d9d616ef4d0
 });

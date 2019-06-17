@@ -257,13 +257,18 @@ public class NotasDAO {
 		}
 		return resultado;
 	}
+<<<<<<< HEAD
 	
 	public boolean actualizar(Nota nota, String usuario, int id) throws DAOException {
+=======
+	public boolean actualizar(Nota nota,int id, String usuario) throws DAOException {
+>>>>>>> 1cbc2627b5ed9211998584566bae6d9d616ef4d0
 		Connection conn;
 		boolean resultado = false;
 
 		try {
 			conn = ds.getConnection();
+<<<<<<< HEAD
 			String sql = "UPDATE notas SET titulo=?, urlimagen=?, nota=? WHERE nombre_usuario=? AND id=?";
 			
 			PreparedStatement st = conn.prepareStatement(sql);
@@ -272,6 +277,16 @@ public class NotasDAO {
 			st.setString(3, nota.getNota());
 			st.setString(4, usuario);
 			st.setInt(5, id);
+=======
+			String sql = "UPDATE notas SET titulo=?, nota=?, urlimagen=? WHERE nombre_usuario=? AND id=?";
+			PreparedStatement st = conn.prepareStatement(sql);
+			st.setString(1, nota.getNombreUsuario());
+			st.setString(2, nota.getTitulo());
+			st.setString(3, nota.getNota());
+			st.setString(4, nota.getUrlimagen());
+			st.setString(5, nota.getCategoria());
+			st.setString(6, nota.getColor());
+>>>>>>> 1cbc2627b5ed9211998584566bae6d9d616ef4d0
 			System.out.println("Se va a actualizar la nota del usuario=" + nota.getNombreUsuario());
 			int contador = st.executeUpdate();
 			if (contador == 1) {
@@ -287,6 +302,11 @@ public class NotasDAO {
 		}
 		return resultado;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 1cbc2627b5ed9211998584566bae6d9d616ef4d0
 
 	// tarea devuelve funciones de categoria
 	/**
